@@ -85,17 +85,10 @@ setTimeout(() => {
 }
 
 
-function train2(req, res) {
-            pyshell = new PythonShell('scripts/tntm.py');
-            pyshell.on('message', function (message) {
-                console.log(message);
-                res.write(message + "\n");
-
-            }); //end of pyshell function for output1 
-        }
-
 async function launchButton(req, res){
     let rec = "";
+    let clean = cleanOutput();
+    let split = splitOutput();
     let train = trainOutput();
 }
 
