@@ -19,7 +19,6 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, 'views', '/index.html'));
 })
 
-
 app.get('/launch', launchButton);
 app.get('/evaluate', evaluateButton);
 
@@ -87,9 +86,10 @@ setTimeout(() => {
 
 async function launchButton(req, res){
     let rec = "";
-    let clean = cleanOutput();
+    let clean = await cleanOutput();
     let split = splitOutput();
     let train = trainOutput();
+    res.write(clean.toString() + split.toString() + train.toSpring());
 }
 
 
