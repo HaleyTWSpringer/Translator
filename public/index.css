@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.button1 {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.button{
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 15.80%;
+  cursor: pointer;
+}
+
+.main-border{
+  border: 3px solid black;
+  margin-top:5%;
+  margin-right:15%;
+  margin-left:15%;
+  
+}
+
+.button-border{
+  margin-left:5%;
+  margin-right:5%;
+  margin-top:3%;
+}
+
+.border{
+  border: 3px solid black;
+  margin-top:5%;
+  margin-bottom: 5%;
+  margin-left:5%;
+  margin-right:5%;
+  padding-bottom:20%;
+}
+
+.titleheader{
+  margin-top:2%;
+  text-align: center;
+}

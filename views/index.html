@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>English to German Translator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+
+</head>
+<body>
+        <script>
+                function launchFunction(){
+                    $.ajax({
+                        type: 'GET',
+                        url: 'http://localhost:3000/launch',
+                        dataType: 'text'
+                    })
+                    .done(function (data){
+                        $('#content').html(data);
+                    });
+                }
+                
+                function evaluateFunction(){
+                    $.ajax({
+                        type: 'GET',
+                        url: 'http://localhost:3000/evaluate',
+                        dataType: 'text'
+                    })
+                    .done(function (data){
+                        $("#content").html(data);
+                    })
+                }
+         </script>
+    <section class="main-border">
+    <h1 class="titleheader">English to German Translator</h1>
+    <section class="button-border">
+    <button class="button1" id="launch" onclick="launchFunction()">Launch</button>
+    <button class="button" id="evaluate" onclick="evaluateFunction()">Evaluate</button>
+    <button class="button">Reverse Phrase Order</button>
+    <button class="button">Set Epochs</button>
+</section>
+<section class="display-border" id="demo">
+    <section class="border">
+        <textare id='content' style='overflow:auto;'></textare>
+    </section>
+</section>
+</section>
+</body>
+</html>
